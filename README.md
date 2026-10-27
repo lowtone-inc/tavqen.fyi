@@ -1,34 +1,34 @@
-# TAVQEN
+# TAVQEN (Jekyll · Chirpy)
 
-넷플릭스 컨셉의 정적 블로그 템플릿. 빌드 도구 없이 HTML / CSS / Vanilla JS(ES Modules)로 동작한다.
+[jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 기반 GitHub Pages 블로그입니다. 넷플릭스 색감(검정 + 빨강)을 `assets/css/jekyll-theme-chirpy.scss` 에서 덮어씁니다. → https://tavqen.fyi
 
-## 실행
-
-ES Module을 쓰므로 `file://`로 열면 안 되고 로컬 서버가 필요하다.
+## 로컬 실행
 
 ```bash
-python3 -m http.server 8000
-# http://localhost:8000
+bundle install
+bundle exec jekyll serve --livereload
+# http://localhost:4000/
 ```
 
-## 구조
+## 글 쓰기
 
+`_posts/YYYY-MM-DD-slug.md` 파일을 만들고 front matter 를 작성합니다.
+
+```yaml
+---
+title: 글 제목
+categories: [개발 로그]
+tags: [태그]
+description: 목록 요약 (선택)
+pin: true   # 홈 상단 고정 (선택)
+---
 ```
-index.html              홈 (히어로 + 가로 스크롤 줄)
-post.html               글 상세 (?id=<post-id>)
-assets/css/style.css    디자인 토큰(:root) + 컴포넌트 스타일
-assets/js/data.js       사이트 설정, 카테고리, 글 데이터
-assets/js/repository.js PostRepository — 데이터 조회 (Repository 패턴)
-assets/js/components.js UI 컴포넌트 함수 (Factory: createComponents)
-assets/js/app.js        페이지 렌더러(Strategy) + 공통 이벤트 바인딩
-```
 
-## 글 추가
+- 카테고리 · 태그 · 아카이브 페이지는 자동 생성됩니다.
+- 사이드바 메뉴는 `_tabs/` (순서는 `order`), 연락처 아이콘은 `_data/contact.yml` 에서 관리합니다.
 
-`assets/js/data.js`의 `POSTS` 배열에 객체를 추가한다. `cover`는 썸네일 그라디언트 색상 두 개.
-`featured: true`인 글이 홈 히어로에 노출된다.
+## 배포
 
-## 페이지 추가
-
-1. HTML에 `<body data-page="이름">`과 필요한 `data-slot` 영역을 둔다.
-2. `app.js`의 `pages` 객체에 같은 이름의 렌더 함수를 추가한다.
+`main` 브랜치에 push 하면 `.github/workflows/pages-deploy.yml` 이 빌드 · 테스트 · 배포합니다.
+Pages Source 는 **GitHub Actions**, Custom domain 은 `tavqen.fyi` 입니다.
+DNS(Spaceship): `@` A 레코드 `185.199.108.153` · `185.199.109.153` · `185.199.110.153` · `185.199.111.153`, `www` CNAME `lowtone-inc.github.io`.
