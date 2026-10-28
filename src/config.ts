@@ -12,7 +12,7 @@ export const SITE = {
 // 서치콘솔 소유 확인 코드. 값이 있을 때만 meta 태그를 출력한다.
 export const SITE_VERIFICATION = {
   google: '',
-  naver: '',
+  naver: '668b5bbb9f36c4de96ff7789b22efd7e666769c2',
 } as const;
 
 // 사이드바 탭 (기존 Chirpy _tabs 순서 유지)
