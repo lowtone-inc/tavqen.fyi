@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import Pagination from '@/components/Pagination.astro';
+import { getPosts, paginate } from '@/lib/posts';
+
+const { data, currentPage, lastPage } = paginate(await getPosts(), 1);
+---
+
+<BaseLayout>
+  <div class="list">
+    {data.map((post) => <PostCard post={post} />)}
+  </div>
+  <Pagination currentPage={currentPage} lastPage={lastPage} />
+</BaseLayout>
+
+<style>
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

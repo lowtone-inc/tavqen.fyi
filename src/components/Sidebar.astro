@@ -1,0 +1,124 @@
+---
+import { NAV_LINKS, SITE, SOCIAL_LINKS } from '@/config';
+import { isActive, withBase } from '@/lib/url';
+
+const path = Astro.url.pathname;
+---
+
+<aside class="sidebar">
+  <div class="brand">
+    <a href={withBase('/')} class="site-title">{SITE.title}</a>
+    <p class="tagline">{SITE.tagline}</p>
+  </div>
+  <nav>
+    <ul>
+      {
+        NAV_LINKS.map(({ href, label, icon }) => (
+          <li>
+            <a href={withBase(href)} class:list={{ active: isActive(path, href) }}>
+              <span class="icon" aria-hidden="true">{icon}</span>{label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <ul class="social">
+    {
+      SOCIAL_LINKS.map(({ href, label }) => (
+        <li>
+          <a href={href.startsWith('/') ? withBase(href) : href} rel="noopener">{label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>
+
+<style>
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    padding: 40px 0 24px;
+    background: var(--sidebar-bg);
+    overflow-y: auto;
+  }
+  .brand {
+    padding: 0 24px 32px;
+  }
+  .site-title {
+    color: var(--netflix-red);
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tagline {
+    margin: 6px 0 0;
+    color: var(--site-subtitle-color);
+    font-size: 0.85rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 24px;
+    color: var(--text-muted-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  nav a:hover {
+    background: var(--sidebar-hover-bg);
+    color: #fff;
+  }
+  nav a.active {
+    color: var(--netflix-red);
+  }
+  .icon {
+    width: 1.2em;
+    text-align: center;
+  }
+  .social {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+    padding: 24px;
+    font-size: 0.8rem;
+    color: var(--text-muted-color);
+  }
+  .social a:hover {
+    color: var(--netflix-red);
+  }
+
+  @media (max-width: 899px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      padding: 16px 0 0;
+    }
+    .brand {
+      padding: 0 16px 8px;
+    }
+    nav ul {
+      display: flex;
+      overflow-x: auto;
+    }
+    nav a {
+      padding: 10px 16px;
+      white-space: nowrap;
+    }
+    .social {
+      display: none;
+    }
+  }
+</style>

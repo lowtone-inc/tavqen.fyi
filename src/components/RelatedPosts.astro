@@ -1,0 +1,50 @@
+---
+import { formatDate } from '@/lib/format';
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+{
+  posts.length > 0 && (
+    <section class="related">
+      <h2>관련 글</h2>
+      <ul>
+        {posts.map((p) => (
+          <li>
+            <a href={postUrl(p.id)}>{p.data.title}</a>
+            <span class="meta-muted">{formatDate(p.data.pubDate)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  .related {
+    margin-top: 48px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--main-border-color);
+  }
+  a:hover {
+    color: var(--netflix-red);
+  }
+</style>

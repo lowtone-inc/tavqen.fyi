@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { withBase } from '@/lib/url';
+---
+
+<BaseLayout title="404" noindex crumb="404">
+  <section class="notfound">
+    <p class="code">404</p>
+    <p>찾는 페이지가 없습니다.</p>
+    <a href={withBase('/')}>← Home</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-block: 80px;
+    text-align: center;
+  }
+  .code {
+    margin: 0;
+    color: var(--netflix-red);
+    font-size: clamp(5rem, 20vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+  a {
+    color: var(--netflix-red);
+    font-weight: 700;
+  }
+</style>

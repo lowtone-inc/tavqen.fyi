@@ -1,0 +1,46 @@
+---
+import { withBase } from '@/lib/url';
+
+export interface Props {
+  // 현재 페이지 이름. 없으면 홈
+  crumb?: string;
+}
+
+const { crumb } = Astro.props;
+---
+
+<header class="topbar">
+  <nav aria-label="breadcrumb">
+    <a href={withBase('/')}>Home</a>
+    {crumb && <><span class="sep">/</span><span class="current">{crumb}</span></>}
+  </nav>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 var(--gutter);
+    background: var(--topbar-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--main-border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted-color);
+  }
+  .topbar a:hover {
+    color: var(--netflix-red);
+  }
+  .sep {
+    margin: 0 8px;
+  }
+  .current {
+    max-width: 40ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>

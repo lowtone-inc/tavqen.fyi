@@ -1,0 +1,77 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+export interface Props {
+  headings: MarkdownHeading[];
+}
+
+// h2, h3만 목차에 노출 (Chirpy와 동일)
+const items = Astro.props.headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{
+  items.length > 0 && (
+    <aside class="toc" aria-label="목차">
+      <p class="toc-title">목차</p>
+      <ul>
+        {items.map((h) => (
+          <li class:list={{ sub: h.depth === 3 }}>
+            <a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+}
+
+<script>
+  // 화면에 보이는 제목에 맞춰 목차 항목 강조
+  const links = document.querySelectorAll<HTMLAnchorElement>('[data-toc]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        links.forEach((a) => a.classList.toggle('current', a.dataset.toc === entry.target.id));
+      }
+    },
+    { rootMargin: '-60px 0px -70% 0px' },
+  );
+  links.forEach((a) => {
+    const target = document.getElementById(a.dataset.toc ?? '');
+    if (target) observer.observe(target);
+  });
+</script>
+
+<style>
+  .toc {
+    position: sticky;
+    top: 88px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    font-size: 0.85rem;
+  }
+  .toc-title {
+    margin: 0 0 12px;
+    color: var(--text-muted-color);
+    font-weight: 700;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid var(--main-border-color);
+  }
+  li {
+    padding: 4px 0 4px 14px;
+  }
+  li.sub {
+    padding-left: 28px;
+  }
+  a {
+    color: var(--text-muted-color);
+  }
+  a:hover,
+  a:global(.current) {
+    color: var(--netflix-red);
+  }
+</style>

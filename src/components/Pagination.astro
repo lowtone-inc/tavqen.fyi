@@ -1,0 +1,46 @@
+---
+import { homePageUrl } from '@/lib/url';
+
+export interface Props {
+  currentPage: number;
+  lastPage: number;
+}
+
+const { currentPage, lastPage } = Astro.props;
+const pages = Array.from({ length: lastPage }, (_, i) => i + 1);
+---
+
+{
+  lastPage > 1 && (
+    <nav class="pagination" aria-label="페이지 이동">
+      {pages.map((n) => (
+        <a href={homePageUrl(n)} class:list={{ active: n === currentPage }}>
+          {n}
+        </a>
+      ))}
+    </nav>
+  )
+}
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+  }
+  a {
+    min-width: 36px;
+    padding: 4px 12px;
+    border-radius: var(--radius);
+    text-align: center;
+    color: var(--text-muted-color);
+  }
+  a:hover {
+    background: var(--card-hover-bg);
+  }
+  a.active {
+    background: var(--netflix-red);
+    color: #fff;
+  }
+</style>
