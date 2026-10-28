@@ -1,0 +1,48 @@
+---
+import PostMeta from './PostMeta.astro';
+import TagList from './TagList.astro';
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, tags } = post.data;
+---
+
+<article class="card">
+  <h3><a href={postUrl(post.id)}>{title}</a></h3>
+  <p>{description}</p>
+  <PostMeta post={post} showReadTime={false} />
+  {tags.length > 0 && <TagList tags={tags} />}
+</article>
+
+<style>
+  /* 넷플릭스 타일처럼 호버 시 살짝 확대 */
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  .card:hover {
+    transform: scale(1.015);
+    background: var(--card-hover-bg);
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  h3 a:hover {
+    color: var(--netflix-red);
+  }
+  p {
+    margin: 0;
+    color: var(--text-muted-color);
+  }
+</style>

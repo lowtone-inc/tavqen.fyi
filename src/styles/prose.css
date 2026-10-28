@@ -1,0 +1,67 @@
+/* 글 본문 스타일 (마크다운 렌더 결과) */
+.prose { font-size: 1.02rem; line-height: 1.85; overflow-wrap: anywhere; }
+.prose h2 { margin: 2.4em 0 0.8em; padding-top: 0.2em; font-size: 1.5rem; scroll-margin-top: 80px; }
+.prose h3 { margin: 2em 0 0.6em; font-size: 1.2rem; scroll-margin-top: 80px; }
+.prose p { margin: 1em 0; }
+.prose a { color: var(--link-color); border-bottom: 1px solid var(--link-underline-color); }
+.prose a:hover { border-bottom-color: var(--link-color); }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose li { margin: 0.3em 0; }
+.prose li::marker { color: var(--netflix-red); }
+.prose strong { color: var(--heading-color); }
+.prose hr { border: 0; border-top: 1px solid var(--main-border-color); margin: 2em 0; }
+
+.prose blockquote {
+  margin: 1.4em 0;
+  padding: 0.2em 1.2em;
+  border-left: 4px solid var(--netflix-red);
+  color: var(--text-muted-color);
+}
+
+/* Chirpy의 {: .prompt-* } 블록을 대체하는 안내 박스 */
+.prose .prompt {
+  margin: 1.4em 0;
+  padding: 0.9em 1.2em 0.9em 1.4em;
+  background: var(--card-bg);
+  border-left: 4px solid var(--prompt-color, #4a90e2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.prose .prompt p { margin: 0; }
+.prose .prompt::before {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--prompt-color, #4a90e2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  content: 'INFO';
+}
+.prose .prompt-tip { --prompt-color: #46c37b; }
+.prose .prompt-tip::before { content: 'TIP'; }
+.prose .prompt-warning { --prompt-color: #f5a623; }
+.prose .prompt-warning::before { content: 'WARNING'; }
+.prose .prompt-danger { --prompt-color: var(--netflix-red); }
+.prose .prompt-danger::before { content: 'DANGER'; }
+
+.prose code {
+  padding: 0.12em 0.4em;
+  background: var(--card-bg);
+  border-radius: 4px;
+  color: #ff8a8f;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+.prose pre {
+  margin: 1.4em 0;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  border: 1px solid var(--main-border-color);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.prose pre code { padding: 0; background: none; color: inherit; font-size: inherit; }
+
+.prose table { width: 100%; border-collapse: collapse; margin: 1.4em 0; }
+.prose th, .prose td { padding: 8px 12px; border: 1px solid var(--main-border-color); text-align: left; }
+.prose th { background: var(--card-bg); color: var(--heading-color); }

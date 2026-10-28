@@ -1,0 +1,66 @@
+---
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  newer?: Post;
+  older?: Post;
+}
+
+const links = [
+  { post: Astro.props.older, label: '← 이전 글', align: 'left' },
+  { post: Astro.props.newer, label: '다음 글 →', align: 'right' },
+] as const;
+---
+
+<nav class="post-nav">
+  {
+    links.map(({ post, label, align }) =>
+      post ? (
+        <a href={postUrl(post.id)} class={align}>
+          <span>{label}</span>
+          <strong>{post.data.title}</strong>
+        </a>
+      ) : (
+        <div />
+      ),
+    )
+  }
+</nav>
+
+<style>
+  .post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 48px;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    transition: background-color 0.2s;
+  }
+  a:hover {
+    background: var(--card-hover-bg);
+  }
+  .right {
+    text-align: right;
+  }
+  span {
+    color: var(--netflix-red);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  strong {
+    color: var(--heading-color);
+  }
+  @media (max-width: 640px) {
+    .post-nav {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

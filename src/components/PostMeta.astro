@@ -1,0 +1,33 @@
+---
+import { categoryUrl } from '@/lib/url';
+import { formatDate, isoDate, readingTime } from '@/lib/format';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+  // 읽는 시간 표시 여부 (카드에서는 본문이 없어 생략 가능)
+  showReadTime?: boolean;
+}
+
+const { post, showReadTime = true } = Astro.props;
+const { pubDate, category } = post.data;
+---
+
+<p class="meta meta-muted">
+  <time datetime={isoDate(pubDate)}>{formatDate(pubDate)}</time>
+  <span>·</span>
+  <a href={categoryUrl(category)}>{category}</a>
+  {showReadTime && <><span>·</span><span>{readingTime(post.body)}</span></>}
+</p>
+
+<style>
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+  }
+  a:hover {
+    color: var(--netflix-red);
+  }
+</style>

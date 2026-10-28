@@ -1,0 +1,12 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import TagList from '@/components/TagList.astro';
+import { getTagGroups } from '@/lib/posts';
+
+const groups = await getTagGroups();
+const counts = Object.fromEntries(groups.map((g) => [g.name, g.posts.length]));
+---
+
+<PageLayout title="Tags" description="태그로 글 찾아보기">
+  <TagList tags={groups.map((g) => g.name)} counts={counts} />
+</PageLayout>

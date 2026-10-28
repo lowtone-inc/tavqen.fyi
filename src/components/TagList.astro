@@ -1,0 +1,52 @@
+---
+import { tagUrl } from '@/lib/url';
+
+export interface Props {
+  tags: readonly string[];
+  counts?: Record<string, number>;
+}
+
+const { tags, counts } = Astro.props;
+---
+
+<ul class="tags">
+  {
+    tags.map((tag) => (
+      <li>
+        <a href={tagUrl(tag)}>
+          {tag}
+          {counts?.[tag] !== undefined && <span class="count">{counts[tag]}</span>}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    display: inline-flex;
+    gap: 6px;
+    padding: 2px 12px;
+    background: var(--card-bg);
+    border-radius: 999px;
+    color: var(--text-muted-color);
+    font-size: 0.82rem;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  a:hover {
+    background: var(--tag-hover);
+    color: #fff;
+  }
+  .count {
+    color: var(--netflix-red);
+    font-weight: 700;
+  }
+</style>

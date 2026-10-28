@@ -1,27 +1,14 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
+# 의존성 / 빌드 산출물
+node_modules/
+dist/
+.astro/
 
-# Jekyll cache
-.jekyll-cache
-.jekyll-metadata
-_site
+# 환경 변수
+.env
+.env.*
 
-# RubyGems
-*.gem
-
-# NPM dependencies
-node_modules
-package-lock.json
-
-# IDE configurations
+.DS_Store
 .idea
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
-!.vscode/tasks.json
-
-# Misc
-_sass/vendors
-assets/js/dist
