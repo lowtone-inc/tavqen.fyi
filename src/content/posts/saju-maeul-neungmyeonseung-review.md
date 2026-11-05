@@ -1,0 +1,113 @@
+---
+title: '[사주] 인스타에 맨날 뜨던 낙인 스님 사주… 나한테 왜 자꾸 보여주는 건데ㅎ 사주마을 능면승 후기'
+description: '인스타에 맨날 뜨던 낙인 스님 사주, 사주마을 능면승을 해본 후기. 팩폭 맞으러 들어갔다가 위로받고 나옴.'
+pubDate: 2026-11-05T10:10:00+09:00
+category: '일상 에피소드'
+tags: ['사주마을', '능면승', '능면승후기', '인스타사주', '사주후기', '사주테스트']
+featured: false
+draft: false
+---
+얼굴에 글자 잔뜩 새겨진 스님이\
+"그대, 이렇지 않소?"\
+하고 쳐다보는 광고
+
+어? 뭔데 이거\
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ\
+해서 홀린 듯이 해본\
+사주마을 능면승 후기입니당
+
+저만 인스타에 이 스님 뜨나요??ㅋㅋㅋㅋ
+
+링크⬇️⬇️\
+<https://saju-maeul.kr/saju/app/monk/intro>
+
+처음엔 그냥\
+성격 몇 줄 알려주는 테스트인 줄 알았거든요?
+
+근데 결과가 전 여덟 편임\
+ㅋㅋㅋㅋㅋㅋㅋ\
+아니 언제 다 읽어?
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+진짜 길어요\
+스크롤 내려도 계속 나옴 ㅎ\
+돈 내고 몇 줄 나오면 굉장히 싫어하는 사람인데\
+그런 걱정은 1도 안 하셔도 됨
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+제일 찔렸던 거
+
+겉으로는 단단해 보이는데\
+속으로는 상대 표정이랑 말투를 계속 되새긴대요\
+그래서 무심하다, 냉정하다는 말 들을 때도\
+신경을 안 써서가 아니라\
+감정 드러내기 전에 정리하는 중이라고
+
+쓰-읍…\
+저 이 말 진짜 많이 들었거든요\
+ㅋㅋㅋㅋㅋㅋㅋㅋ\
+"너 화났어?" "아니 생각 중인데?"\
+이거 저만 그런 거 아니죠??
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+그리고 그림자 파트\
+답장 보내기 전에 문장 고치고\
+끝난 대화를 마음속에서 혼자 계속 이어간대요\
+ㅋㅋㅋㅋㅋㅋㅋㅋ 아니 이거 어떻게 알았냐고요
+
+확인하려고 한 질문이\
+상대한텐 따지는 말처럼 들릴 수 있대요\
+아니 나는 진짜 궁금해서 물어본 건데요\
+ㅋㅋㅋㅋㅋㅋ ㅠㅠ
+
+그래서 질문 앞에\
+왜 궁금한지 한 문장 붙이래요\
+이건 좀 써먹어야겠음
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+돈 얘기도 나옴\
+'언젠가 쓰겠지' 하는 마음으로 돈을 쓴대요\
+장바구니에 언젠가 쓸 거 가득함\
+ㅋㅋㅋㅋㅋㅋㅋ\
+무엇을 샀는지보다 왜 샀는지 적어보래요\
+뼈 맞음
+
+그리고 반전
+
+팩폭 맞을 각오하고 끝까지 읽었는데\
+마지막이 편지예요\
+"명식은 그대의 선택을 대신하지 못하오"
+
+팩폭 맞으러 들어갔다가 위로받고 나옴\
+ㅋㅋㅋㅋㅋㅋㅋㅋ
+
+물론 사주는 사주니까!!\
+100% 다 믿지는 않아요
+
+맞는 부분은\
+헐 소름…? 하면서 보고
+
+아닌 부분은\
+음 이건 아닌 듯ㅎ 하고 넘겼어요
+
+정리하자면
+
+⭐️ 답장 보내기 전에 문장 세 번 고치는 분\
+⭐️ 무심하단 소리 듣는데 속은 복잡한 분\
+⭐️ 사극, 오컬트 감성 좋아하는 분
+
+은 재밌게 보실 듯
+
+저처럼 사주 과몰입은 잘하지만\
+맹신은 안 하는 사람도\
+ㅋㅋㅋㅋㅋㅋ\
+가볍게 보기 괜찮았음!
+
+참고로 소리 켜면 효과음 꽤 커요\
+사무실에선 조심 ㅋㅋ
+
+\#사주마을 \#능면승 \#능면승후기 \#인스타사주 \#사주후기 \#사주테스트
