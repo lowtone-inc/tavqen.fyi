@@ -1,7 +1,7 @@
 export const SITE = {
   title: 'TAVQEN',
   tagline: '오늘 밤 정주행할 글',
-  description: '개발 로그 · 디자인 노트 · 일상 에피소드를 시즌제로 연재하는 블로그.',
+  description: '요즘 빠져 있는 것과 일상 에피소드를 연재하는 블로그.',
   author: 'TAVQEN',
   locale: 'ko-KR',
   postsPerPage: 10,
