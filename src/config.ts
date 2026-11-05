@@ -25,6 +25,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { href: 'https://github.com/lowtone-inc', label: 'GitHub' },
   { href: '/feed.xml', label: 'RSS' },
 ] as const;
