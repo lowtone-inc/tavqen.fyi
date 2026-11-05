@@ -28,14 +28,14 @@ draft: false
 ㅋㅋㅋㅋㅋㅋㅋ\
 아니 언제 다 읽어?
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 결과 표지](/images/saju-maeul-neungmyeonseung-review/01.jpg)
 
 진짜 길어요\
 스크롤 내려도 계속 나옴 ㅎ\
 돈 내고 몇 줄 나오면 굉장히 싫어하는 사람인데\
 그런 걱정은 1도 안 하셔도 됨
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 일간 본모습](/images/saju-maeul-neungmyeonseung-review/02.jpg)
 
 제일 찔렸던 거
 
@@ -51,7 +51,7 @@ draft: false
 "너 화났어?" "아니 생각 중인데?"\
 이거 저만 그런 거 아니죠??
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 그대만 모르는 그림자](/images/saju-maeul-neungmyeonseung-review/03.jpg)
 
 그리고 그림자 파트\
 답장 보내기 전에 문장 고치고\
@@ -67,7 +67,7 @@ draft: false
 왜 궁금한지 한 문장 붙이래요\
 이건 좀 써먹어야겠음
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 새는 구멍](/images/saju-maeul-neungmyeonseung-review/04.jpg)
 
 돈 얘기도 나옴\
 '언젠가 쓰겠지' 하는 마음으로 돈을 쓴대요\
