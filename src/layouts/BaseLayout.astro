@@ -10,17 +10,18 @@ export interface Props {
   description?: string;
   article?: ArticleMeta;
   noindex?: boolean;
+  image?: string;
   // 상단바 breadcrumb에 표시할 현재 페이지 이름
   crumb?: string;
 }
 
-const { title, description, article, noindex, crumb } = Astro.props;
+const { title, description, image, article, noindex, crumb } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={SITE.locale.split('-')[0]}>
   <head>
-    <BaseHead title={title} description={description} article={article} noindex={noindex} />
+    <BaseHead title={title} description={description} image={image} article={article} noindex={noindex} />
   </head>
   <body>
     <Sidebar />

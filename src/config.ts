@@ -2,7 +2,7 @@ export const SITE = {
   title: 'TAVQEN',
   tagline: '오늘 밤 정주행할 글',
   description: '개발 로그 · 디자인 노트 · 일상 에피소드를 시즌제로 연재하는 블로그.',
-  author: 'LOWTONE',
+  author: 'TAVQEN',
   locale: 'ko-KR',
   postsPerPage: 10,
   // 글별 이미지가 없을 때 쓰는 공유 이미지 (public/ 기준 경로)
